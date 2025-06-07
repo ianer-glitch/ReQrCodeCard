@@ -7,7 +7,7 @@ export type InputProps = ComponentProps<typeof Inp> & {
 
 export const Input = ({label, ...props} : InputProps) =>{
     return (
-        <fieldset>
+        <fieldset className="w-full">
             <label>{label}</label>
             <Inp {...props}/>
         </fieldset>
