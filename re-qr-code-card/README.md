@@ -25,3 +25,8 @@ A simple QR code generator front end that previews the image following a phone g
 - React Hook Forms
 
 - Zustand
+
+- Shadcn
+
+## Components
+Every lib component must be implemented using facade desing pattern.
