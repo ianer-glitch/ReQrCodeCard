@@ -1,5 +1,5 @@
 import { Title } from "@/shared/components/atoms/title";
-import { HomeForm } from "../components/HomeForm/homeForm";
+import { HomeForm } from "../components/HomeForm/HomeForm";
 
 export default function Home(){
     return (

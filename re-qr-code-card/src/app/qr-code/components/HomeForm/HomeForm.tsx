@@ -6,15 +6,16 @@ import styles from  "./homeForm.module.css"
 import { useState } from "react"
 import { useRouter } from "next/navigation"
 import { QrCodeStore } from "../../state/QrCodeStore"
+import { useQrCode } from "./useQrCode"
 
 
 
 export const HomeForm = () =>{
     const router = useRouter()
     const [isLoading,setIsLoading] = useState(false)
-
     const [text,setText] = useState("")
-
+    const {qrCodeImage} = useQrCode("200",text)
+    
     const store = QrCodeStore()
     
     const onClick = async () =>{
@@ -25,7 +26,7 @@ export const HomeForm = () =>{
 
     const getQrCodeImage = async () =>{
         setIsLoading(true)
-        store.setImageBase64("");
+        store.setImageBase64(qrCodeImage);
         setIsLoading(false)
         
     }
