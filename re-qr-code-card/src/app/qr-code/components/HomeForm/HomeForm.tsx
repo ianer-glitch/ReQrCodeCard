@@ -14,7 +14,7 @@ export const HomeForm = () =>{
     const router = useRouter()
     const [isLoading,setIsLoading] = useState(false)
     const [text,setText] = useState("")
-    const {qrCodeImage} = useQrCode("200",text)
+    const {fetchQrCode} = useQrCode()
     
     const store = QrCodeStore()
     
@@ -26,7 +26,8 @@ export const HomeForm = () =>{
 
     const getQrCodeImage = async () =>{
         setIsLoading(true)
-        store.setImageBase64(qrCodeImage);
+        const base64Image = await fetchQrCode("200",text)
+        store.setImageBase64(base64Image);
         setIsLoading(false)
         
     }
