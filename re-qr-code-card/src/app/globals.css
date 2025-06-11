@@ -20,6 +20,7 @@ html,body{
   --h3-font-size: clamp(1.2rem, 2vh, 1.4rem);
   --p-font-size: clamp(0.9rem, 1.8vh, 1.2rem);
   --label-font-size: clamp(0.7rem, 1.4vh, 0.9rem);
+  
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
