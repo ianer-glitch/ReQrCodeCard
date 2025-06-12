@@ -9,6 +9,6 @@ export const  BackButton = () => {
     }
     
     return (
-        <Button onClick={handleClick}>Back</Button>
+        <Button className="w-10" onClick={handleClick}>Back</Button>
     )
 }

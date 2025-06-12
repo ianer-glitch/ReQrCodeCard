@@ -4,7 +4,7 @@ import { Button } from "@/shared/components/atoms/button/button"
 import { Input } from "@/shared/components/atoms/input/input"
 import styles from  "./homeForm.module.css"
 import { useState } from "react"
-// import { useRouter } from "next/navigation"
+import { useRouter } from "next/navigation"
 import { QrCodeStore } from "../../state/QrCodeStore"
 import { useQrCode } from "./useQrCode"
 import { QrCodeLoading } from "../qrCodeLoading/qrCodeLoading"
@@ -13,25 +13,25 @@ import { QrCodeLoading } from "../qrCodeLoading/qrCodeLoading"
 
 export const HomeForm = () =>{
     
-    // const router = useRouter()
-    const [isLoading,setIsLoading] = useState(true)
+    const router = useRouter()
+    const [isLoading,setIsLoading] = useState(false)
     const [text,setText] = useState("")
     const {fetchQrCode} = useQrCode()
+    
     
     const store = QrCodeStore()
     
     const onClick = async () =>{
-        console.info(text)
+        setIsLoading(true)
         await getQrCodeImage()
-        
-        // router.push("/qr-code/qr-code-view")
+        router.push("/qr-code/qr-code-view")
+        setIsLoading(false)
+
     }
 
     const getQrCodeImage = async () =>{
-        setIsLoading(true)
         const base64Image = await fetchQrCode("200",text)
         store.setImageBase64(base64Image);
-        setIsLoading(false)
         
     }
 

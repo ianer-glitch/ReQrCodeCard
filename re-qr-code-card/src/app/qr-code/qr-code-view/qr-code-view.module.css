@@ -1,0 +1,17 @@
+.qr-code-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    /* background-color: tomato; */
+    
+    
+}
+
+.qr-code-image{
+    transform-style: preserve-3d;
+    perspective: 500px;
+    scale: 1.5;
+
+}

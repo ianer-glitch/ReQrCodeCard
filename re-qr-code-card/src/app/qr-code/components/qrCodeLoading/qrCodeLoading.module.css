@@ -1,54 +1,34 @@
 .item1{
  background-color: #616161 ;
- animation: movement-1 infinite ease-in-out 1s;
- top: 0;
+ animation: movement-1 infinite alternate .5s;
+
+ 
 }
 
 .item2{
     background-color: #616161 ;
-    animation: movement-2 infinite 1s 1s;
+    animation: movement-1 infinite alternate .5s .2s; 
+    
 }
 
 .item3{
     background-color: #616161;
- animation: movement-3 infinite 1s 2s;
+    animation: movement-1 infinite alternate .5s .4s;
+ 
 }
 
 @keyframes movement-1 {
 
-
-    50%{
-        transform: translate(80px,140px);
-    }
-
-    75%{
-        transform: translate(-80px,140px);
-    }
-
-
-}
-
-@keyframes movement-2 {
-
-    50%{
-        transform: translate(80px,-140px);
+    
+    from{
+        scale: .8;
     }
     
-    75%{
-        scale: 2;        
-        transform: translate(150px,0px);
+    to{
+        scale: 1;
+        transform: translate(0,140px);
     }
+
 
 }
 
-@keyframes movement-3 {
-
-    50%{
-        transform: translate(-100px,0);
-    }
-
-    75%{
-        transform: translate(-100px,-150px);
-    }
-
-}
