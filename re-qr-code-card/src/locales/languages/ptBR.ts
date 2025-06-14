@@ -1,7 +1,7 @@
 export const ptBR = {
     homeLabel:"Insira o texto para conversão",
-    homeButton:"Vai",
+    homeButton:"Vai!",
     
-    qrCodeViewTitle:"Seu código Qr esta pronto",
+    qrCodeViewTitle:"Seu código QR está pronto! ",
     backButton:"Voltar"
 }
