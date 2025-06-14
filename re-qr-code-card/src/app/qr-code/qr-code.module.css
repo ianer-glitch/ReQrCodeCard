@@ -1,6 +1,6 @@
 .qr-code-layout{
-    /* background-color:  aqua; */
-    width: 100%;
+    margin: 0 auto;
+    max-width: 800px;
     height: 100%;
     padding: 1rem;
 }
