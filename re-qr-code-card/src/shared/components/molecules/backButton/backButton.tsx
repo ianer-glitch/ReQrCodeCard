@@ -1,6 +1,7 @@
 import { useRouter } from "next/navigation"
-import { Button } from "../atoms/button/button"
+
 import { useTranslation } from "@/locales"
+import { Button } from "../../atoms/button/button"
 
 export const  BackButton = () => {
     const router = useRouter()

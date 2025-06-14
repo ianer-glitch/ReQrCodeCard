@@ -2,10 +2,11 @@
 import { Title } from "@/shared/components/atoms/title";
 import { QrCodeStore } from "../state/QrCodeStore";
 import Image from 'next/image'
-import { BackButton } from "@/shared/components/molecules/backButton";
+
 import { useEffect, useState } from "react";
 import style from "./qr-code-view.module.css"
 import { useTranslation } from "@/locales";
+import { BackButton } from "@/shared/components/molecules/backButton/backButton";
 
 
 export default function QrCodeView(){
