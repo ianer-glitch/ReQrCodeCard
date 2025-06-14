@@ -5,12 +5,14 @@ import Image from 'next/image'
 import { BackButton } from "@/shared/components/molecules/backButton";
 import { useEffect, useState } from "react";
 import style from "./qr-code-view.module.css"
+import { useTranslation } from "@/locales";
 
 
 export default function QrCodeView(){
     const store = QrCodeStore()
     const [rotX,setRotX] = useState(0)
     const [rotY,setRotY] = useState(0)
+    const {t} = useTranslation()
 
      
     useEffect(()=>{
@@ -47,7 +49,7 @@ export default function QrCodeView(){
     return(
         <div className="h-full">
             <BackButton />
-            <Title>Your Qr Code is here!</Title>
+            <Title>{t("qrCodeViewTitle")}</Title>
             <div className={style['qr-code-container']} >
                 {store.imageBase64 &&  
                 <Image  
